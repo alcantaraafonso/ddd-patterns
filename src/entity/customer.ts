@@ -1,14 +1,15 @@
+import Address from "./address";
+
 export default class Customer {
 
-    _id: string;
-    _name: string;
-    _address: Address;
-    _active: boolean = true;
+    private _id: string;
+    private _name: string = "";
+    private _address!: Address;
+    private _active: boolean = false;
 
-    constructor(id: string, name: string, address: Address) {
+    constructor(id: string, name: string) {
         this._id = id;
         this._name = name;
-        this._address = address;
         this.validate(); //Aqui é um exemplo de como podemos validar o objeto (autovalidation principle)
     }
 
@@ -31,15 +32,23 @@ export default class Customer {
     }
 
     validate() {
-        if (this._name.length === 0) {
-            throw new Error("Nome inválido");
+        if (this._id.length === 0) {
+            throw new Error("ID é requerido");
         }
         if (this._name.length === 0) {
             throw new Error("Nome inválido");
         }
     }
 
-    setAddress(address: Address) {  
+    set address(address: Address) {  
         this._address = address;
+    }
+
+    get name(): string {
+        return this._name;
+    }
+
+    isActive(): boolean {
+        return this._active;
     }
 }
