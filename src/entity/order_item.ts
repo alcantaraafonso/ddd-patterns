@@ -10,4 +10,12 @@ export default class OrderItem {
         this._price = price;
         this._quantity = quantity;
     }
+
+    get price(): number {
+        return this._price;
+    }
+
+    orderItemTotal(): number {
+        return this._price * this._quantity;
+    }
 }
