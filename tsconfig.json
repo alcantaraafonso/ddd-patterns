@@ -108,6 +108,6 @@
   },
   "include": [
     "./src/**/*.ts",
-    "./src/entity/**/*.ts"
+    "src/domain/entity/**/*.ts"
   ],
 }

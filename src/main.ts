@@ -1,6 +1,6 @@
-import Customer from "./entity/customer";
-import Order from "./entity/order";
-import OrderItem from "./entity/order_item";
+import Customer from "./domain/entity/customer";
+import Order from "./domain/entity/order";
+import OrderItem from "./domain/entity/order_item";
 
 let customer = new Customer('1', 'John Doe', new Address('123 Main St', 'Anytown', '12345', 10));
 customer.activate();
