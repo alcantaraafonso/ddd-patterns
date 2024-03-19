@@ -4,7 +4,7 @@ export default interface RepositoryInterface<T> {
 
     update(entity: T): Promise<void>;
 
-    findById(id: string): Promise<T>;
+    find(id: string): Promise<T>;
     
     findAll(): Promise<T[]>;
 }
