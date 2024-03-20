@@ -35,7 +35,7 @@ describe("Customer unit tests", () => {
         //Arrange
         let customer = new Customer("123", "John Doe");
         let address = new Address("Rua 1", "123", "12345-123", 10);
-        customer.address = address;
+        customer.changeAddress(address);
 
         customer.activate();
 

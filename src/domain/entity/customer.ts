@@ -20,6 +20,10 @@ export default class Customer {
         this._name = newName;
     }
 
+    changeAddress(newAddress: Address) {
+        this._address = newAddress;
+    }
+
     //A modelagem do domínio rico expressa CLARAMENTE a necessidade do negócio
     activate() {
         if(this._address === null || this._address === undefined) {    
@@ -45,12 +49,16 @@ export default class Customer {
         return this._id;
     }
 
-    set address(address: Address) {  
-        this._address = address;
+    get address(): Address {
+        return this._address;
     }
 
     get name(): string {
         return this._name;
+    }
+
+    get active(): boolean {
+        return this._active;
     }
 
     isActive(): boolean {
