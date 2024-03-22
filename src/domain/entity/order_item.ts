@@ -5,7 +5,7 @@ export default class OrderItem {
     private _quantity: number;
     private _productId: string;
 
-  
+
     constructor(id: string, name: string, price: number, productId: string, quantity: number) {
         this._id = id;
         this._name = name;
@@ -36,5 +36,9 @@ export default class OrderItem {
 
     get quantity(): number {
         return this._quantity;
+    }
+
+    changeQuantity(plus: number) {
+        this._quantity += plus;
     }
 }
