@@ -1,6 +1,6 @@
 
-import EventHandlerInterface from "../../@shared/event-handler.interface";
-import CustomerCreatedEvent from "../event/customer-created.event";
+import CustomerCreatedEvent from "../../../customer/event/customer-created.event";
+import EventHandlerInterface from "../../../@shared/event/event-handler.interface";
 
 export default class CustomerCreatedMessage2 implements EventHandlerInterface<CustomerCreatedEvent> {
 

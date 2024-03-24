@@ -1,5 +1,6 @@
-import EventHandlerInterface from "../../@shared/event-handler.interface";
-import CustomerAddressChangedEvent from "../event/customer-address-changed.event";
+
+import CustomerAddressChangedEvent from "../../../customer/event/customer-address-changed.event";
+import EventHandlerInterface from "../../../@shared/event/event-handler.interface";
 
 export default class CustomerAddressChangedHandler implements EventHandlerInterface<CustomerAddressChangedEvent> {
     handle(event: CustomerAddressChangedEvent): void {

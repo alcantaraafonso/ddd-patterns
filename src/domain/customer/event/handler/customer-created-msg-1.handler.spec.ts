@@ -1,11 +1,11 @@
-import Address from "../../../entity/address";
-import Customer from "../../../entity/customer";
-import EventDispatcher from "../../@shared/event-dispatcher";
-import CustomerAddressChangedEvent from "../event/customer-address-changed.event";
-import CustomerCreatedEvent from "../event/customer-created.event";
+import Address from "../../value-object/address";
+import Customer from "../../../customer/entity/customer";
+import CustomerAddressChangedEvent from "../../../customer/event/customer-address-changed.event";
+import CustomerCreatedEvent from "../../../customer/event/customer-created.event";
 import CustomerAddressChangedHandler from "./customer-address-changed.handler";
 import CustomerCreatedMessage1 from "./customer-created-msg-1.handler";
 import CustomerCreatedMessage2 from "./customer-created-msg-2.handler";
+import EventDispatcher from "../../../@shared/event/event-dispatcher";
 
 describe("Log 1 event test", () => {
     it("should register the event handler", () => {
